@@ -9,7 +9,7 @@ public class ThreadTiming {
 
     public ThreadTiming() {
 
-        Thread 线程实现定时任务 = new Thread(() -> {
+        Thread timing = new Thread(() -> {
             while (true) {
                 try {
                     System.out.println("线程实现定时任务");
@@ -19,7 +19,7 @@ public class ThreadTiming {
                 }
             }
         });
-        Thread thread = new Thread(线程实现定时任务);
+        Thread thread = new Thread(timing);
         thread.setDaemon(true);
         thread.start();
     }
